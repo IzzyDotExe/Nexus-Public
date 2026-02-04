@@ -8,7 +8,7 @@ import { useTextContent } from "@/lib/hooks/useTextContent";
 
 async function getBlogPosts() {
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000'}/api/blog`, {
+    const response = await fetch(`/api/blog`, {
       cache: 'no-store',
     });
     
