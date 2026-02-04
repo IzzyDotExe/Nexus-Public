@@ -1,0 +1,25 @@
+{
+  "pages": {
+    "home": {
+      "heroImage": "/heroImage.png",
+      "heroImageAlt": "John Doe - Full Stack Developer",
+      "socialLinks": [
+        {
+          "label": "GitHub",
+          "href": "https://github.com/izzydotexe",
+          "icon": "/github.svg"
+        },
+        {
+          "label": "LinkedIn",
+          "href": "https://www.linkedin.com/in/israel-aristide-03266220a/",
+          "icon": "/linkedin.svg"
+        },
+        {
+          "label": "Spotify",
+          "href": "https://open.spotify.com/",
+          "icon": "/spotify.svg"
+        }
+      ]
+    }
+  }
+}

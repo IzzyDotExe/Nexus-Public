@@ -1,0 +1,24 @@
+{
+  "avatar": {
+    "image": "/avatar.png",
+    "fallback": "JD",
+    "homeLink": "/"
+  },
+  "socialLinks": [
+    {
+      "label": "GitHub",
+      "href": "https://github.com/johndoe",
+      "icon": "/github.svg"
+    },
+    {
+      "label": "LinkedIn",
+      "href": "https://www.linkedin.com/in/johndoe/",
+      "icon": "/linkedin.svg"
+    },
+    {
+      "label": "Spotify",
+      "href": "https://open.spotify.com/",
+      "icon": "/spotify.svg"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+'use client';
+
+import { useState, useEffect } from 'react';
+import { BlogList } from "@/components/blog/blog-list";
+import { BlogPostForm } from "@/components/blog/blog-post-form";
+import { useAdminMode } from "@/contexts/admin-context";
+import { useTextContent } from "@/lib/hooks/useTextContent";
+
+async function getBlogPosts() {
+  try {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000'}/api/blog`, {
+      cache: 'no-store',
+    });
+    
+    if (!response.ok) {
+      throw new Error('Failed to fetch blog posts');
+    }
+    
+    const data = await response.json();
+    return data.posts || [];
+  } catch (error) {
+    console.error('Error fetching blog posts:', error);
+    return [];
+  }
+}
+
+export default function BlogPage() {
+  const { isAdminMode } = useAdminMode();
+  const [posts, setPosts] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    getBlogPosts().then((data) => {
+      setPosts(data);
+      setLoading(false);
+    });
+  }, []);
+
+  const { getText } = useTextContent();
+
+  if (loading) {
+    return <div>{getText('blog.loadingText')}</div>;
+  }
+
+  return (
+    <main>
+      <section className="relative flex min-h-[50vh] items-center overflow-hidden px-4 py-16">
+        <div className="container relative z-10 mx-auto text-center">
+          <h1 className="mb-6 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+            {getText('blog.title')}
+          </h1>
+          <p className="text-lg text-muted-foreground sm:text-xl max-w-2xl mx-auto">
+            {getText('blog.subtitle')}
+          </p>
+        </div>
+      </section>
+      
+      <div className="container mx-auto px-4 py-12 space-y-12">
+        {isAdminMode && <BlogPostForm />}
+        <BlogList posts={posts} />
+      </div>
+    </main>
+  );
+}

@@ -1,0 +1,112 @@
+{
+  "nav": {
+    "title": "John Doe",
+    "home": "Accueil",
+    "projects": "Projets",
+    "blog": "Blog",
+    "contactMe": "Me Contacter"
+  },
+  "home": {
+    "title": "Développeur Web",
+    "subtitle": "Insérez un sous-titre accrocheur ici, laissez libre cours à votre imagination.",
+    "ctaText": "Explorer les fonctionnalités",
+    "eyebrow": "John Doe",
+    "contactButtonText": "Me Contacter",
+    "viewProjectsButtonText": "Voir les Projets",
+    "causes": {
+      "comment": "N'hésitez pas à remplacer ceux-ci par des causes qui vous tiennent à cœur",
+      "sectionTitle": "Des Causes qui Méritent Votre Attention",
+      "sectionDescription": "Les gens réels ont besoin d'aide réelle. Considérez soutenir ces efforts humanitaires vitaux.",
+      "gaza": {
+        "title": "Soutenir Gaza - UNRWA",
+        "description": "Aidez à fournir une aide essentielle, un abri et un soutien aux réfugiés palestiniens à Gaza par l'intermédiaire de l'Agence des Nations Unies pour les secours et l'emploi des réfugiés de Palestine.",
+        "buttonText": "Donner à l'UNRWA",
+        "buttonLink": "https://www.unrwa.org/"
+      },
+      "haiti": {
+        "title": "Soutenir Haïti - PAM",
+        "description": "Aidez à combattre la faim et la malnutrition en Haïti par l'intermédiaire du Programme alimentaire mondial et ses programmes d'assistance alimentaire d'urgence.",
+        "buttonText": "Donner au PAM",
+        "buttonLink": "https://www.wfp.org/countries/haiti"
+      },
+      "sudan": {
+        "title": "Soutenir le Soudan - UNICEF",
+        "description": "Aidez à fournir un soutien vital aux enfants et aux familles touchés par le conflit au Soudan par l'intermédiaire des programmes d'intervention d'urgence de l'UNICEF.",
+        "buttonText": "Donner à l'UNICEF",
+        "buttonLink": "https://www.unicef.ca/en/donate-to-sudan"
+      },
+      "folding": {
+        "title": "Folding@Home",
+        "description": "Faites don de la puissance de traitement inactif de votre ordinateur pour aider les chercheurs à guérir des maladies comme le cancer, Alzheimer et le COVID-19.",
+        "descriptionNote": "(Imaginez si tous ces centres de données IA le faisaient aussi...)",
+        "buttonText": "Rejoindre Folding@Home",
+        "buttonLink": "https://foldingathome.org/"
+      },
+      "quebec": {
+        "title": "Soutenir la Jeunesse au Québec",
+        "description": "Aidez les jeunes sans abri et à risque à Montréal à sortir de la rue par l'intermédiaire des programmes d'soutien, des repas et des ressources de Dans La Rue.",
+        "buttonText": "Donner à Dans La Rue",
+        "buttonLink": "https://danslarue.org/en/donations/?locale=en-CA"
+      },
+      "archive": {
+        "title": "Internet Archive",
+        "description": "Protégez l'accès gratuit au savoir. Soutenez la mission d'Internet Archive de préserver l'histoire numérique, les livres et les sites Web pour les générations futures.",
+        "buttonText": "Donner à Archive.org",
+        "buttonLink": "https://archive.org/donate"
+      }
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Sous-titre de la page de blog va ici",
+    "loadingText": "Chargement..."
+  },
+  "projects": {
+    "title": "Projets",
+    "subtitle": "Sous-titre de la page des projets va ici",
+    "sectionTitles": {
+      "realWorld": "Dans le Monde Réel",
+      "personal": "Projets Personnels",
+      "games": "Jeux"
+    },
+    "sectionSubtitles": {
+      "realWorld": "Projets du monde réel en production.",
+      "personal": "Projets Personnels.",
+      "games": "Jeux."
+    },
+    "noResults": "Aucun projet trouvé avec les technologies sélectionnées.",
+    "clearFilters": "Effacer les filtres",
+    "filterByTech": "Filtrer par technologie :",
+    "clearAll": "Tout effacer",
+    "showingProjects": "Affichage de {filtered} sur {total} projets",
+    "loadingState": "Chargement des projets...",
+    "errorTitle": "Échec du chargement des projets",
+    "errorMessage": "Nous avons rencontré une erreur lors du chargement des projets. Veuillez réessayer.",
+    "tryAgain": "Réessayer"
+  },
+  "contact": {
+    "dialogTitle": "Entrez en Contact",
+    "dialogDescription": "Complétez la vérification ci-dessous pour voir mes coordonnées",
+    "verificationLabel": "Vérification Humaine",
+    "verificationPlaceholder": "Entrez la solution",
+    "verifyButton": "Vérifier et Continuer",
+    "verifyingText": "Vérification en cours...",
+    "verificationNote": "Cela aide à prévenir le spam et garantit que vous êtes humain",
+    "loadingVerification": "Chargement de la vérification...",
+    "successTitle": "Bonjour Humain ! (Je pense)",
+    "successMessage": "Voici mes coordonnées :",
+    "emailLabel": "Email",
+    "phoneLabel": "Téléphone 🇨🇦",
+    "discordLabel": "Discord",
+    "closingNote": "N'hésitez pas à me contacter à tout moment !",
+    "newChallengeTitle": "Obtenir un nouveau défi"
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "tryAgain": "Réessayer",
+    "cancel": "Annuler",
+    "confirm": "Confirmer",
+    "submit": "Soumettre"
+  }
+}

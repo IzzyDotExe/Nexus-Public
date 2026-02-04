@@ -1,0 +1,112 @@
+{
+  "nav": {
+    "title": "John Doe",
+    "home": "Home",
+    "projects": "Projects",
+    "blog": "Blog",
+    "contactMe": "Contact me"
+  },
+  "home": {
+    "title": "Web Developer",
+    "subtitle": "Insert a catchy subtitle here, whatever your imagination desires.",
+    "ctaText": "Explore Features",
+    "eyebrow": "John Doe",
+    "contactButtonText": "Contact Me",
+    "viewProjectsButtonText": "View Projects",
+    "causes": {
+      "comment": "Feel free to replace thesse with causes you care about",
+      "sectionTitle": "Shit You Should Care About",
+      "sectionDescription": "Real people need real help. Consider supporting these vital humanitarian efforts.",
+      "gaza": {
+        "title": "Support Gaza - UNRWA",
+        "description": "Help provide essential aid, shelter, and support to Palestinian refugees in Gaza through the United Nations Relief and Works Agency.",
+        "buttonText": "Donate to UNRWA",
+        "buttonLink": "https://www.unrwa.org/"
+      },
+      "haiti": {
+        "title": "Support Haiti - WFP",
+        "description": "Help combat hunger and malnutrition in Haiti through the World Food Programme's emergency food assistance and nutrition programs.",
+        "buttonText": "Donate to WFP",
+        "buttonLink": "https://www.wfp.org/countries/haiti"
+      },
+      "sudan": {
+        "title": "Support Sudan - UNICEF",
+        "description": "Help provide life-saving support to children and families affected by conflict in Sudan through UNICEF's emergency response programs.",
+        "buttonText": "Donate to UNICEF",
+        "buttonLink": "https://www.unicef.ca/en/donate-to-sudan"
+      },
+      "folding": {
+        "title": "Folding@Home",
+        "description": "Donate your computer's idle processing power to help researchers cure diseases like cancer, Alzheimer's, and COVID-19.",
+        "descriptionNote": "(Imagine if all those AI data centers were doing this too...)",
+        "buttonText": "Join Folding@Home",
+        "buttonLink": "https://foldingathome.org/"
+      },
+      "quebec": {
+        "title": "Support Youth in Quebec",
+        "description": "Help homeless and at-risk youth in Montreal get off the streets through Dans La Rue's support programs, meals, and resources.",
+        "buttonText": "Donate to Dans La Rue",
+        "buttonLink": "https://danslarue.org/en/donations/?locale=en-CA"
+      },
+      "archive": {
+        "title": "Internet Archive",
+        "description": "Protect free access to knowledge. Support the Internet Archive's mission to preserve digital history, books, and websites for future generations.",
+        "buttonText": "Donate to Archive.org",
+        "buttonLink": "https://archive.org/donate"
+      }
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Blog page subtitle goes here",
+    "loadingText": "Loading..."
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "projects page subtitle goes here",
+    "sectionTitles": {
+      "realWorld": "In the Real World",
+      "personal": "Personal Projects",
+      "games": "Games"
+    },
+    "sectionSubtitles": {
+      "realWorld": "Real-world projects in production.",
+      "personal": "Personal Projects.",
+      "games": "Games."
+    },
+    "noResults": "No projects found with the selected technologies.",
+    "clearFilters": "Clear filters",
+    "filterByTech": "Filter by technology:",
+    "clearAll": "Clear all",
+    "showingProjects": "Showing {filtered} of {total} projects",
+    "loadingState": "Loading projects...",
+    "errorTitle": "Failed to load projects",
+    "errorMessage": "We encountered an error while loading the projects. Please try again.",
+    "tryAgain": "Try Again"
+  },
+  "contact": {
+    "dialogTitle": "Get In Touch",
+    "dialogDescription": "Complete the verification below to view my contact information",
+    "verificationLabel": "Human Verification",
+    "verificationPlaceholder": "Enter the solution",
+    "verifyButton": "Verify & Continue",
+    "verifyingText": "Verifying...",
+    "verificationNote": "This helps prevent spam and ensures you're human",
+    "loadingVerification": "Loading verification...",
+    "successTitle": "Hello Human! (I think)",
+    "successMessage": "Here are my contact details:",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone 🇨🇦",
+    "discordLabel": "Discord",
+    "closingNote": "Feel free to reach out anytime!",
+    "newChallengeTitle": "Get new challenge"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "tryAgain": "Try Again",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "submit": "Submit"
+  }
+}
