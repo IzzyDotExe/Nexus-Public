@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Israel Aristide",
+  title: "John Doe",
   description: "Full Stack Developer - Bringing ideas to life with code and creativity",
   icons: {
     icon: "/favicon.ico",
