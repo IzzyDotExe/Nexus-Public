@@ -10,12 +10,11 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb';
-import Link from 'next/link';
 import Image from 'next/image';
 
 async function getBlogPost(slug: string) {
   try {
-    const response = await fetch(`/api/blog/${slug}`,
+    const response = await fetch(`http://localhost:3000/api/blog/${slug}`,
       {
         cache: 'no-store',
       }

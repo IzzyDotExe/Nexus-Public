@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ContactPopup } from "@/lib/molecules/contact-popup";
-import { PageHeader } from "@/lib/molecules/page-header";
+import { PageHeader } from "@/components/header/page-header";
 import { useTextContent } from "@/lib/hooks/useTextContent";
 
 export function HeaderNavigation() {

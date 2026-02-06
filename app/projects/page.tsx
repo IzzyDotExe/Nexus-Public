@@ -2,12 +2,12 @@
 'use client'
 
 import { useState, useEffect } from "react";
-import { ProjectsHero } from "@/lib/molecules/projects-hero";
-import { ProjectFilters } from "@/lib/molecules/project-filters";
-import { ProjectsSection } from "@/lib/molecules/projects-section";
-import { NoProjects } from "@/lib/molecules/no-projects";
-import { ProjectsLoadingState } from "@/lib/molecules/projects-loading-state";
-import { ProjectsError } from "@/lib/molecules/projects-error";
+import { HalfScreenHero } from "@/lib/molecules/halfscreen-hero";
+import { ProjectFilters } from "@/components/projects/project-filters";
+import { ProjectsSection } from "@/components/projects/projects-section";
+import { NoProjects } from "@/components/projects/no-projects";
+import { ProjectsLoadingState } from "@/components/projects/projects-loading-state";
+import { ProjectsError } from "@/components/projects/projects-error";
 import { ProjectForm } from "@/components/projects/project-form";
 import { useAdminMode } from "@/contexts/admin-context";
 import { useTextContent } from "@/lib/hooks/useTextContent";
@@ -112,7 +112,7 @@ export default function ProjectsPage() {
 
   return (
     <main>
-      <ProjectsHero />
+      <HalfScreenHero title={getText('projects.title')} subtitle={getText('projects.subtitle')}/>
 
       <section className="py-16 px-4">
         <div className="container mx-auto space-y-16">

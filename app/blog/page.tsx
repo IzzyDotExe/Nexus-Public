@@ -5,6 +5,7 @@ import { BlogList } from "@/components/blog/blog-list";
 import { BlogPostForm } from "@/components/blog/blog-post-form";
 import { useAdminMode } from "@/contexts/admin-context";
 import { useTextContent } from "@/lib/hooks/useTextContent";
+import { HalfScreenHero } from '@/lib/molecules/halfscreen-hero';
 
 async function getBlogPosts() {
   try {
@@ -44,21 +45,13 @@ export default function BlogPage() {
 
   return (
     <main>
-      <section className="relative flex min-h-[50vh] items-center overflow-hidden px-4 py-16">
-        <div className="container relative z-10 mx-auto text-center">
-          <h1 className="mb-6 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-            {getText('blog.title')}
-          </h1>
-          <p className="text-lg text-muted-foreground sm:text-xl max-w-2xl mx-auto">
-            {getText('blog.subtitle')}
-          </p>
-        </div>
-      </section>
-      
+      <HalfScreenHero title={getText('blog.title')} subtitle={getText('blog.subtitle')} />
+
       <div className="container mx-auto px-4 py-12 space-y-12">
         {isAdminMode && <BlogPostForm />}
         <BlogList posts={posts} />
       </div>
+      
     </main>
   );
 }
