@@ -5,7 +5,7 @@ import { BlogList } from "@/components/blog/blog-list";
 import { BlogPostForm } from "@/components/blog/blog-post-form";
 import { useAdminMode } from "@/contexts/admin-context";
 import { useTextContent } from "@/lib/hooks/useTextContent";
-import { HalfScreenHero } from '@/lib/molecules/halfscreen-hero';
+import { HalfScreenHero } from '@/lib/common/molecules/halfscreen-hero';
 
 async function getBlogPosts() {
   try {
@@ -51,7 +51,7 @@ export default function BlogPage() {
         {isAdminMode && <BlogPostForm />}
         <BlogList posts={posts} />
       </div>
-      
+
     </main>
   );
 }

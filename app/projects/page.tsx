@@ -2,7 +2,7 @@
 'use client'
 
 import { useState, useEffect } from "react";
-import { HalfScreenHero } from "@/lib/molecules/halfscreen-hero";
+import { HalfScreenHero } from "@/lib/common/molecules/halfscreen-hero";
 import { ProjectFilters } from "@/components/projects/project-filters";
 import { ProjectsSection } from "@/components/projects/projects-section";
 import { NoProjects } from "@/components/projects/no-projects";

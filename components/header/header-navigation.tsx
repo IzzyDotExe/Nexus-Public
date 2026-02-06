@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ContactPopup } from "@/lib/molecules/contact-popup";
+import { ContactPopup } from "@/lib/common/organisms/contact/contact-popup";
 import { PageHeader } from "@/components/header/page-header";
 import { useTextContent } from "@/lib/hooks/useTextContent";
 

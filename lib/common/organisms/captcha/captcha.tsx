@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { RefreshCw, CheckCircle, XCircle } from "lucide-react"
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils/cn"
 
 interface CaptchaProps {
   onVerify?: (isValid: boolean) => void
@@ -109,7 +109,6 @@ export function Captcha({ onVerify, className, difficulty = 'hard' }: CaptchaPro
       </Label>
 
       <div className="flex items-center space-x-3">
-        {/* CAPTCHA Display */}
         <div className="flex-1">
           <div className="flex items-center justify-between p-3 bg-muted rounded-md border">
             <span

@@ -1,8 +1,8 @@
 'use client';
 
 import { Button } from "@/components/ui/button";
-import { PageHero } from "@/lib/molecules/fullscreen-hero";
-import { ContactPopup } from "@/lib/molecules/contact-popup";
+import { PageHero } from "@/lib/common/molecules/fullscreen-hero";
+import { ContactPopup } from "@/lib/common/organisms/contact/contact-popup";
 import { Card } from "@/components/ui/card";
 import { Mail, ExternalLink, Heart } from "lucide-react";
 import { useTextContent } from "@/lib/hooks/useTextContent";
