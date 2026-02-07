@@ -7,7 +7,6 @@ import { generateRandomColor, generateRandomTransform } from "@/lib/utils/captch
 import { RefreshCw, XCircle } from "lucide-react";
 import { Dispatch, KeyboardEventHandler, SetStateAction, SubmitEventHandler, useState } from "react";
 
-
 interface CaptchaFormProps {
     fetchCaptcha: () => void;
     onVerify: () => void;
