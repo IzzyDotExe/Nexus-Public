@@ -1,11 +1,11 @@
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useTextContent } from "@/lib/hooks";
 import { CaptchaSession } from "@/lib/types/CaptchaSession";
 import { generateRandomColor, generateRandomTransform } from "@/lib/utils/captcha";
-import { Input } from "@base-ui/react";
 import { RefreshCw, XCircle } from "lucide-react";
-import { ChangeEventHandler, Dispatch, KeyboardEventHandler, SetStateAction, SubmitEventHandler, useState } from "react";
+import { Dispatch, KeyboardEventHandler, SetStateAction, SubmitEventHandler, useState } from "react";
 
 
 interface CaptchaFormProps {
@@ -42,8 +42,8 @@ export function CaptchaForm({
     const { getText } = useTextContent();
 
         // Handle input change with visual effects
-    const handleInputChange : ChangeEventHandler = (e) => {
-        const value = e.target.textContent
+    const handleInputChange = (e : React.ChangeEvent<HTMLInputElement>) => {
+        const value = e.target.value;
         setUserInput(value)
 
         // Trigger shake animation
