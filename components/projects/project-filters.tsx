@@ -1,7 +1,7 @@
 'use client';
 
 import { Button } from "@/components/ui/button";
-import { useTextContent } from "@/lib/hooks/useTextContent";
+import { Typography } from "@/lib/common/atoms/typography";
 
 interface ProjectFiltersProps {
   allTags: string[]
@@ -20,11 +20,14 @@ export function ProjectFilters({
   totalProjects,
   filteredCount
 }: ProjectFiltersProps) {
-  const { getText } = useTextContent();
   return (
     <div className="space-y-4">
       <div className="flex flex-wrap items-center gap-2">
-        <span className="text-sm font-medium text-muted-foreground mr-2">{getText('projects.filterByTech')}</span>
+        <Typography 
+          textKey="projects.filterByTech" 
+          as="span" 
+          className="text-sm font-medium text-muted-foreground mr-2"
+        />
         {allTags.map(tag => (
           <Button
             key={tag}
@@ -43,14 +46,17 @@ export function ProjectFilters({
             onClick={onClearFilters}
             className="text-xs text-muted-foreground hover:text-foreground"
           >
-            {getText('projects.clearAll')}
+            <Typography textKey="projects.clearAll" />
           </Button>
         )}
       </div>
       {selectedTags.length > 0 && (
-        <p className="text-sm text-muted-foreground">
-          {getText('projects.showingProjects', { filtered: filteredCount, total: totalProjects })}
-        </p>
+        <Typography 
+          textKey="projects.showingProjects" 
+          params={{ filtered: filteredCount, total: totalProjects }}
+          as="p"
+          className="text-sm text-muted-foreground"
+        />
       )}
     </div>
   )

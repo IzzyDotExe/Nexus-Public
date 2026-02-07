@@ -2,14 +2,13 @@
 
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import { ReactNode } from "react"
 
 interface PageHeroProps {
   children?: React.ReactNode,
-  title: string
-  subtitle?: string
-  eyebrow?: string
-  ctaText?: string
-  onCtaClick?: () => void
+  title: ReactNode
+  subtitle?: ReactNode
+  eyebrow?: ReactNode
   imageSrc?: string
   imageAlt?: string
   socialLinks?: Array<{ label: string; href: string; icon: string }>
@@ -20,8 +19,6 @@ export function PageHero({
   children,
   subtitle,
   eyebrow,
-  ctaText = "Get Started",
-  onCtaClick,
   imageSrc,
   imageAlt = "Hero image",
   socialLinks = []
@@ -32,17 +29,11 @@ export function PageHero({
       <div className="container relative z-10 mx-auto grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
         <div className="flex flex-col justify-center">
           {eyebrow && (
-            <p className="mb-4 text-lg font-medium text-muted-foreground sm:text-xl lg:text-2xl">
-              {eyebrow}
-            </p>
+              eyebrow
           )}
-          <h1 className="mb-6 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-            {title}
-          </h1>
+          {title}
           {subtitle && (
-            <p className="mb-8 text-lg text-muted-foreground sm:text-xl">
-              {subtitle}
-            </p>
+              subtitle
           )}
           <div>
             {children}          

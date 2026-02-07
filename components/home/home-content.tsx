@@ -7,19 +7,19 @@ import { Card } from "@/components/ui/card";
 import { Mail, ExternalLink, Heart } from "lucide-react";
 import { useTextContent } from "@/lib/hooks/useTextContent";
 import pagesConfig from "@/config/pages.json";
+import { Typography } from "@/lib/common/atoms/typography";
 
 export function HomeContent() {
     const { getText } = useTextContent();
     
     return <>
         <PageHero 
-            title={getText('home.title')} 
-            subtitle={getText('home.subtitle')} 
-            ctaText={getText('home.ctaText')} 
+            title={<Typography textKey="home.title" as="h1" className="mb-6 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl"/>} 
+            subtitle={<Typography textKey="home.subtitle" as="p" className="mb-8 text-lg text-muted-foreground sm:text-xl"/>} 
             imageSrc={pagesConfig.pages.home.heroImage}
             imageAlt={pagesConfig.pages.home.heroImageAlt}
             socialLinks={pagesConfig.pages.home.socialLinks}
-            eyebrow={getText('home.eyebrow')}
+            eyebrow={<Typography as="p" textKey="home.eyebrow" className="mb-4 text-lg font-medium text-muted-foreground sm:text-xl lg:text-2xl" />}
         >
             <ContactPopup
                 trigger={
@@ -27,7 +27,7 @@ export function HomeContent() {
                         size="lg"
                         className="w-fit"
                     >
-                        {getText('home.contactButtonText')}
+                        <Typography textKey="home.contactButtonText"/>
                         <Mail className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </Button>
                 }
@@ -38,7 +38,7 @@ export function HomeContent() {
                 className="ml-4 w-fit"
             >
                 <a href="/projects">
-                    {getText('home.viewProjectsButtonText')}
+                    <Typography textKey="home.viewProjectsButtonText" />
                 </a>
             </Button>
         </PageHero>

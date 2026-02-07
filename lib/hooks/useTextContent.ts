@@ -63,9 +63,14 @@ export function useTextContent(language?: LanguageCode) {
    * Get translated text by dot-notation key
    * @param key - Dot-notation key path (e.g., 'home.title', 'contact.dialog.title')
    * @param params - Optional object for parameter replacement in template strings
-   * @returns Translated text or the key itself if not found
+   * @returns Translated text, empty string if loading, or the key itself if not found
    */
   const getText = (key: string, params?: Record<string, string | number>): string => {
+    // Return empty string while loading to prevent showing keys
+    if (isLoading) {
+      return '';
+    }
+
     const keys = key.split('.');
     let value: any = translations;
 

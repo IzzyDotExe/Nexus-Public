@@ -1,6 +1,7 @@
 "use client"
 
-import { useState } from "react"
+import { ReactNode, useState } from "react"
+import Link from "next/link"
 import { ModeToggle } from "@/components/theme/theme-toggle"
 import { LanguageToggle } from "@/components/theme/language-toggle"
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
@@ -8,10 +9,11 @@ import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import Image from "next/image"
 import headerConfig from "@/config/header.json"
+import { Typography } from "@/lib/common/atoms/typography"
 
 interface PageHeaderProps {
-  title?: string
-  children?: React.ReactNode
+  title?: ReactNode
+  children?: ReactNode
 }
 
 export function PageHeader({ title = "Nexus", children }: PageHeaderProps) {
@@ -21,14 +23,13 @@ export function PageHeader({ title = "Nexus", children }: PageHeaderProps) {
     <header className="fixed top-0 left-0 right-0 z-50 bg-blue-500/50  backdrop-blur-md supports-backdrop-filter:bg-background/60">
       <div className="container mx-auto flex h-14 items-center justify-between px-4 lg:px-10">
         <div className="flex items-center gap-10">
-          <a href={headerConfig.avatar.homeLink} className="flex items-center gap-2">
+          <Link href={headerConfig.avatar.homeLink} className="flex items-center gap-2">
             <Avatar>
               <AvatarImage src={headerConfig.avatar.image} />
               <AvatarFallback>{headerConfig.avatar.fallback}</AvatarFallback>
             </Avatar>
-          
-            <h1 className="text-lg font-semibold">{title}</h1>
-          </a>
+            {title}
+          </Link>
         </div>
 
         {/* Desktop Navigation */}
