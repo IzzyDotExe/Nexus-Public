@@ -22,6 +22,7 @@ export function Typography({
   const { getText, isLoading } = useTextContent();
   
   if (isLoading) {
+    // Return skeleton directly without wrapping in Component to avoid block-level stretching
     return <Skeleton variant="text" textElement={Component} className={className} />;
   }
   
