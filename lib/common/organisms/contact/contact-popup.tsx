@@ -11,8 +11,8 @@ import { CaptchaSession } from "@/lib/types/CaptchaSession"
 import { generateRandomColor, generateRandomTransform } from "@/lib/utils/captcha"
 import { ContactInfo } from "@/lib/types/ContactInfo"
 import { ContactDetails } from "../../molecules/contact/contact-details"
-import { ContactSuccess } from "../../molecules/contact/contact-success"
-import { ContactClosingNote } from "../../molecules/contact/contact-closing-note"
+import { ResultNote } from "../../atoms/note/result-note"
+import { ClosingNote } from "../../atoms/note/closing-note"
 
 interface ContactPopupProps {
     trigger?: React.ReactNode
@@ -155,11 +155,11 @@ export function ContactPopup({ trigger, className }: ContactPopupProps) {
                             />
                         ) : (
                             <div className="space-y-4 animate-in fade-in-50 duration-500">
-                                <ContactSuccess />
+                                <ResultNote icon={"success"} subtitle={getText('contact.successMessage')} title={getText('contact.successTitle')} />
                                 {contactInfo && (
                                     <ContactDetails contactInfo={contactInfo} />
                                 )}
-                                <ContactClosingNote />
+                                <ClosingNote textContent={getText('contact.closingNote')} />
                             </div>
                         )}
                     </CardContent>

@@ -1,13 +1,17 @@
 import { useTextContent } from "@/lib/hooks"
 
-export function ContactClosingNote() {
+interface ClosingNoteProps {
+    textContent: string
+}
 
-    const { getText } = useTextContent();
+export function ClosingNote({
+    textContent
+}: ClosingNoteProps) {
 
     return (
         <div className="pt-4 border-t">
             <p className="text-xs text-muted-foreground text-center">
-                {getText('contact.closingNote')}
+                {textContent}
             </p>
         </div>
     )
