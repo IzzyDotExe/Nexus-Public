@@ -268,17 +268,16 @@ The site includes a built-in admin system for managing projects and blog posts w
 5. Submit to save to `data/projects.json`
 
 **Manual Editing:**
-Edit `data/projects.json` directly:
+Create `data/projects.json`:
 ```json
 {
-  "id": "unique-id",
-  "title": "Project Name",
-  "description": "Project description",
-  "technologies": ["React", "TypeScript"],
-  "category": "realWorld",
-  "externalLink": "https://example.com",
-  "repoLink": "https://github.com/user/repo",
-  "featured": true
+  "id": "puzzle-quest",
+  "title": "Puzzle Quest",
+  "description": "An engaging puzzle game with 50+ levels, achievements system, and beautiful animations.",
+  "tech": ["Phaser", "TypeScript", "LocalStorage API"],
+  "link": "https://github.com/yourusername/puzzle-quest",
+  "image": "/projects/puzzle.png",
+  "category": "games"
 }
 ```
 
