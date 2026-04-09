@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import { BlogContent } from '@/components/blog/blog-content';
 import { Badge } from '@/components/ui/badge';
 import { Metadata } from "next";
+import { getBlogPost } from '@/lib/utils/blog';
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -11,26 +12,6 @@ import {
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb';
 import Image from 'next/image';
-
-async function getBlogPost(slug: string) {
-  try {
-    const response = await fetch(`/api/blog/${slug}`,
-      {
-        cache: 'no-store',
-      }
-    );
-
-    if (!response.ok) {
-      return null;
-    }
-
-    const data = await response.json();
-    return data.post;
-  } catch (error) {
-    console.error('Error fetching blog post:', error);
-    return null;
-  }
-}
 
 export async function generateMetadata({
   params,
